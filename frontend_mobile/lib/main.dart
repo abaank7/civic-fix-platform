@@ -4,6 +4,7 @@ import 'screens/report_screen.dart';
 import 'screens/feed_screen.dart';
 import 'screens/map_screen.dart';
 import 'screens/my_reports_screen.dart';
+import '../config.dart';
 
 void main() async {
   // Ensure Flutter bindings are initialized before doing async work
@@ -11,8 +12,8 @@ void main() async {
 
   // Initialize Supabase for direct image uploads to your bucket
   await Supabase.initialize(
-    url: 'https://uzkmqubzotbuifnjktnu.supabase.co',
-    anonKey: 'sb_publishable_MH1lVrUBwgczb4_kH7D73w_pny_1265', 
+    url: Config.supabaseUrl,
+    anonKey: Config.supabaseAnonKey, 
   );
 
   runApp(const CivicFixApp());

@@ -6,6 +6,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:device_info_plus/device_info_plus.dart';
+import '../config.dart';
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({super.key});
@@ -70,7 +71,7 @@ class _ReportScreenState extends State<ReportScreen> {
 
       // D. Send to FastAPI Backend[cite: 3]
       final response = await http.post(
-        Uri.parse('http://192.168.29.38:8001/api/v1/issues/'), 
+        Uri.parse('${Config.baseUrl}/api/v1/issues/'), 
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'description': _descController.text,

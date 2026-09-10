@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicFix Platform API</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #09090B;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            text-align: center;
+            background-color: #121214;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #27272A;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 { 
+            color: #6B4EFF; 
+            margin-bottom: 10px; 
+            font-size: 2.2rem;
+        }
+        p { 
+            color: #A1A1AA; 
+            line-height: 1.6; 
+            margin-bottom: 30px; 
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn {
+            display: block;
+            padding: 14px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.2s ease-in-out;
+        }
+        /* Primary Button */
+        .btn-primary {
+            background-color: #6B4EFF;
+            color: white;
+            border: 1px solid #6B4EFF;
+        }
+        .btn-primary:hover { 
+            background-color: #5a3ee0; 
+            transform: translateY(-2px);
+        }
+        /* Secondary Buttons */
+        .btn-secondary {
+            background-color: transparent;
+            color: #E4E4E7;
+            border: 1px solid #3F3F46;
+        }
+        .btn-secondary:hover {
+            background-color: #27272A;
+            border-color: #6B4EFF;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .footer-links { 
+            margin-top: 25px; 
+            display: flex; 
+            gap: 20px; 
+            justify-content: center; 
+        }
+        .footer-links a { 
+            color: #8B75FF; 
+            text-decoration: none; 
+            font-size: 13px; 
+            font-weight: 600;
+        }
+        .footer-links a:hover { 
+            text-decoration: underline; 
+            color: #A393FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ CivicFix API</h1>
+        <p>The backend orchestration engine for the CivicFix Platform is active and running securely in the cloud.</p>
+        
+        <!-- Platform Navigation Buttons -->
+        <div class="button-group">
+            <a href="https://civic-fix-platform.onrender.com/docs" class="btn btn-primary">📚 View API Documentation</a>
+            <a href="https://civic-fix-platform.vercel.app" class="btn btn-secondary" target="_blank">🌍 Open Public Dashboard</a>
+            <a href="https://civic-fix-platform.vercel.app/admin" class="btn btn-secondary" target="_blank">🔐 Open Admin Portal</a>
+            <a href="https://github.com/abaank7/civic-fix-platform/releases/download/v1.0.0/CivicFix.apk" class="btn btn-secondary" target="_blank">📱 Download Android Mobile App (APK)</a>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+        
+            <a href="https://github.com/abaank7/civic-fix-platform" target="_blank">View GitHub Repo</a>
+        </div>
+    </div>
+</body>
+</html>

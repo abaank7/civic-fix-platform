@@ -59,7 +59,7 @@ async def categorize_issue(description: str, image_url: Optional[str] = None) ->
     }
     
     payload = {
-        "model": "gpt-4o-mini",
+        "model": "gpt-5-mini",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content}

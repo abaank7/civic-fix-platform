@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Header, Depends
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from dotenv import load_dotenv
@@ -50,9 +51,17 @@ def get_admin_key(x_admin_key: str = Header(None)):
 
 
 # --- ROOT ENDPOINT ---
-@app.get("/")
-def read_root():
-    return {"message": "CivicFix API is running!"}
+@app.get("/", response_class=HTMLResponse)
+async def root():
+    # Dynamically locate index.html in the same directory as main.py
+    current_dir = os.path.dirname(os.path.realpath(__file__))
+    html_path = os.path.join(current_dir, "index.html")
+    
+    # Read the file and return its contents
+    with open(html_path, "r", encoding="utf-8") as f:
+        html_content = f.read()
+        
+    return HTMLResponse(content=html_content, status_code=200)
 
 
 # --- ADMIN VERIFY ENDPOINT ---

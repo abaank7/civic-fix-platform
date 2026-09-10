@@ -1,16 +1,26 @@
-# React + Vite
+# 💻 CivicFix Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, React-based web administration portal designed for city officials and municipal departments. This dashboard acts as the centralized command center to view, track, and resolve civic issues reported by citizens via the mobile app.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tech Stack
 
-## React Compiler
+* **Framework:** React.js
+* **Build Tool:** [Vite](https://vitejs.dev/) (Lightning-fast HMR and compilation)
+* **Routing:** React Router DOM (Client-side routing)
+* **API Integration:** Native `fetch` API for RESTful communication
+* **Deployment:** [Vercel](https://vercel.com/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Real-Time Data Feed:** Instantly view incoming civic reports with their associated photo evidence, timestamps, and AI-assigned categories (e.g., PWD, KPDCL, SMC).
+* **Interactive Map View:** View exactly where an issue was reported using integrated geospatial data (latitude/longitude).
+* **Secure Admin Portal:** A protected route requiring a master administrative key to access modification capabilities.
+* **Issue Management:** Administrators can dynamically update ticket statuses (`Pending`, `In Progress`, `Resolved`) or delete/flag invalid reports.
+* **Dynamic Status Colors:** Visual indicators help prioritize and quickly scan the resolution state of city infrastructure issues.
+
+---
+

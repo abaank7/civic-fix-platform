@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:device_info_plus/device_info_plus.dart';
+import '../config.dart';
 
 class MyReportsScreen extends StatefulWidget {
   const MyReportsScreen({super.key});
@@ -35,7 +36,7 @@ class _MyReportsScreenState extends State<MyReportsScreen> {
 
       // 2. Fetch all issues 
       final response = await http
-          .get(Uri.parse('http://192.168.29.38:8001/api/v1/issues/'))
+          .get(Uri.parse('${Config.baseUrl}/api/v1/issues/'))
           .timeout(const Duration(seconds: 8));
 
       if (response.statusCode == 200) {

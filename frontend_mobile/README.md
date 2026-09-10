@@ -1,17 +1,19 @@
-# frontend_mobile
+# 📱 CivicFix Mobile App
 
-A new Flutter project.
+A cross-platform mobile application built with Flutter. This app empowers citizens to easily report civic infrastructure issues (like potholes, broken streetlights, or water leaks) by capturing photo evidence and precise GPS geolocation data.
 
-## Getting Started
+## 🚀 Tech Stack
+* **Framework:** Flutter / Dart
+* **Maps:** `flutter_map` & OpenStreetMap
+* **Networking:** `http` for REST API communication
+* **Security:** Compile-time secret injection via `--dart-define`
 
-This project is a starting point for a Flutter application.
+## ✨ Key Features
+* **Live Issue Feed:** View reported issues in real-time, complete with status tags and timestamps.
+* **Smart Filtering:** Filter civic issues by category (e.g., PWD, KPDCL, SMC) or resolution status.
+* **Interactive Mini-Map:** View exact incident locations via embedded OpenStreetMap integration.
+* **Secure API Communication:** Communicates seamlessly with the live Python FastAPI backend.
 
-A few resources to get you started if this is your first Flutter project:
+## 🔐 Security Note: Compile-Time Secrets
+To prevent sensitive Supabase API keys from being leaked in version control, this app utilizes Flutter's built-in `String.fromEnvironment()` method. Configuration variables are never hardcoded in the repository. Instead, they are injected securely via the terminal at compile time.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

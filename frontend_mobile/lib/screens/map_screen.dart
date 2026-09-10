@@ -5,6 +5,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'package:cached_network_image/cached_network_image.dart';
+import '../config.dart';
 
 // --- PRO FEATURE: OFFLINE TILE CACHING PROVIDER ---
 // This class intercepts map images and saves them permanently to local storage.
@@ -51,7 +52,7 @@ class _MapScreenState extends State<MapScreen> {
   Future<void> _fetchIssues() async {
     try {
       final response = await http
-          .get(Uri.parse('http://192.168.29.38:8001/api/v1/issues/'))
+          .get(Uri.parse('${Config.baseUrl}/api/v1/issues/'))
           .timeout(const Duration(seconds: 8));
 
       if (response.statusCode == 200) {

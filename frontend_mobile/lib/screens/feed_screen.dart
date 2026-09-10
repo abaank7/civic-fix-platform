@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import '../config.dart';
+// import 'config.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
@@ -47,8 +49,9 @@ class _FeedScreenState extends State<FeedScreen> {
     setState(() => _isLoading = true);
     try {
       final response = await http
-          .get(Uri.parse('http://192.168.29.38:8001/api/v1/issues/'))
-          .timeout(const Duration(seconds: 8));
+          .get(Uri.parse('${Config.baseUrl}/api/v1/issues/'))
+          .timeout(const Duration(seconds: 10));
+          print("ATTEMPTING TO FETCH FROM: $response");
 
       if (response.statusCode == 200) {
         setState(() {
@@ -65,6 +68,7 @@ class _FeedScreenState extends State<FeedScreen> {
     } catch (e) {
       setState(() {
         _errorMessage = "Failed to connect to server.";
+        print("CRITICAL API ERROR: $e");
         _isLoading = false;
       });
     }
