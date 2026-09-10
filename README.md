@@ -2,7 +2,7 @@
 
 CivicFix is a full-stack, AI-powered civic issue reporting platform. It empowers citizens to report local infrastructure issues (like potholes, broken streetlights, or water leaks) via a mobile app, while providing city administrators with a real-time web dashboard to track, categorize, and resolve them.
 
-## 🚀 Live Demo & Links
+## 🚀 Live Links
 * **Web Dashboard (Vercel):** https://civic-fix-platform.vercel.app/
 * **Admin Dashboard (Vercel):** https://civic-fix-platform.vercel.app/admin/
 * **Backend API (Render):** https://civic-fix-platform.onrender.com/
