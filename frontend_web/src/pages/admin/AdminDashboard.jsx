@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, MapPin, AlertTriangle, Trash2, CheckCircle, Clock, Image as ImageIcon, ExternalLink, Filter } from 'lucide-react';
+import { API_BASE_URL } from '../../config';
 
 // --- CUSTOM INSTANT DROPDOWN ---
 const CustomDropdown = ({ value, onChange, options }) => {
@@ -63,7 +64,7 @@ export default function AdminDashboard() {
 
   const fetchIssues = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/v1/issues/');
+      const response = await fetch(`${API_BASE_URL}/api/v1/issues/`);
       const data = await response.json();
       setIssues(data);
     } catch (err) {
@@ -76,7 +77,7 @@ export default function AdminDashboard() {
   const handleUpdateStatus = async (issueId, newStatus) => {
     setIsUpdating(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/v1/admin/issues/${issueId}/status`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/admin/issues/${issueId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -104,7 +105,7 @@ export default function AdminDashboard() {
 
     setIsDeleting(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/v1/admin/issues/${issueId}`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/admin/issues/${issueId}`, {
         method: 'DELETE',
         headers: {
           'x-admin-key': adminKey,

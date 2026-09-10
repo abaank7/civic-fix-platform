@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { MapPin, Clock, CheckCircle, AlertCircle, ShieldCheck, Image as ImageIcon, ExternalLink, Filter } from 'lucide-react';
+import { API_BASE_URL } from '../../config';
+
 
 export default function PublicDashboard() {
   const [issues, setIssues] = useState([]);
@@ -18,7 +20,8 @@ export default function PublicDashboard() {
 
   const fetchIssues = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/v1/issues/');
+    //   const response = await fetch('http://127.0.0.1:8001/api/v1/issues/');
+    const response = await fetch(`${API_BASE_URL}/api/v1/issues/`);
       if (!response.ok) throw new Error('Failed to fetch data.');
       const data = await response.json();
       setIssues(data);

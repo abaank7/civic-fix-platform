@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ShieldAlert, Lock, ArrowRight, Loader2 } from 'lucide-react';
+import { API_BASE_URL } from '../../config';
 
 export default function AdminLogin() {
   const [adminKey, setAdminKey] = useState('');
@@ -30,7 +31,7 @@ export default function AdminLogin() {
 
     try {
       // Make a real request to the backend to verify the key
-      const response = await fetch('http://127.0.0.1:8001/api/v1/admin/verify', {
+      const response = await fetch(`${API_BASE_URL}/api/v1/admin/verify`, {
         method: 'GET',
         headers: {
           'x-admin-key': key,
