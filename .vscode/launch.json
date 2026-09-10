@@ -1,0 +1,50 @@
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "1. Launch Backend (FastAPI)",
+//       "type": "debugpy",
+//       "request": "launch",
+//       "module": "uvicorn",
+//       "args": [
+//         "app.main:app",
+//         "--host",
+//         "0.0.0.0",
+//         "--port",
+//         "8001",
+//         "--reload"
+//       ],
+//       "cwd": "${workspaceFolder}/backend",
+//       "justMyCode": true
+//     },
+//     {
+//       "name": "2. Launch Mobile App (Flutter)",
+//       "type": "dart",
+//       "request": "launch",
+//       "program": "${workspaceFolder}/frontend_mobile/lib/main.dart",
+//       "cwd": "${workspaceFolder}/frontend_mobile"
+//     },
+//     {
+//       "name": "3. Launch Admin Desktop (Flutter)",
+//       "type": "dart",
+//       "request": "launch",
+//       "program": "${workspaceFolder}/frontend_admin/lib/main.dart",
+//       "cwd": "${workspaceFolder}/frontend_admin",
+//       "args": [
+//         "-d",
+//         "windows"
+//       ]
+//     }
+//   ],
+//   "compounds": [
+//     {
+//       "name": "🚀 Run CivicFix Full Stack",
+//       "configurations": [
+//         "1. Launch Backend (FastAPI)",
+//         "2. Launch Mobile App (Flutter)",
+//         "3. Launch Admin Desktop (Flutter)"
+//       ],
+//       "stopAll": true
+//     }
+//   ]
+// }

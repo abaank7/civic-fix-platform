@@ -1,0 +1,11 @@
+# Environments
+.env
+.venv/
+env/
+__pycache__/
+
+# Node/React
+node_modules/
+dist/
+.vite/
+.DS_Store
