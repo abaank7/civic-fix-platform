@@ -5,7 +5,7 @@ CivicFix is a full-stack, AI-powered civic issue reporting platform. It empowers
 ## 🚀 Live Demo & Links
 * **Web Dashboard (Vercel):** https://civic-fix-platform.vercel.app/
 * **Admin Dashboard (Vercel):** https://civic-fix-platform.vercel.app/admin/
-* **Backend API Docs (Render):** https://civic-fix-platform.onrender.com/docs
+* **Backend API (Render):** https://civic-fix-platform.onrender.com/
 * **Mobile App (Android):** https://github.com/abaank7/civic-fix-platform/releases/download/v1.0.0/CivicFix.apk
 
 ## 🧠 System Architecture
