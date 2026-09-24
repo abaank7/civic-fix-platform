@@ -6,7 +6,7 @@ RUN uv pip install --system --no-cache -r requirements.txt
 COPY . .
 
 # Move into the backend folder where main.py lives
-WORKDIR /app/backend
+WORKDIR /backend/app
 
 # Run uvicorn using the dynamic Cloud Run port
 CMD exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}
