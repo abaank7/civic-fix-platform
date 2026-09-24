@@ -11,7 +11,7 @@ from app.models.issue import Issue
 
 load_dotenv()
 
-
+#--------- FIX EVERY PROJECT'S DEPLOYMENT -------------------
 
 # Automatically create tables if they don't exist. 
 Base.metadata.create_all(bind=engine)
