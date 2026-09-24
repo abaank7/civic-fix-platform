@@ -1,6 +1,6 @@
 class Config {
   
-  static const String baseUrl = 'https://civic-fix-platform.onrender.com';
+  static const String baseUrl = 'https://civic-fix-platform-1052697360156.asia-south1.run.app';
 
   static const String supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
