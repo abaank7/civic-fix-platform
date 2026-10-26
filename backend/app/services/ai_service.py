@@ -84,5 +84,5 @@ async def categorize_issue(description: str, image_url: Optional[str] = None) ->
             return "Invalid"
             
     except Exception as e:
-        print(f"AI Categorization error: {e}")
-        return "Invalid"
+        # This will force the FastAPI server to send the error to Flutter!
+        raise ValueError(f"OpenAI API Crashed: {str(e)}")

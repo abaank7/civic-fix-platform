@@ -6,9 +6,9 @@ SMC: garbage dumps, overflowing bins, street sanitation, broken street lights, u
 KPDCL: exposed wires, fallen poles, broken transformers, power outages, electrical faults
 JKFD: fallen trees, trees blocking roads, landslides with vegetation, blocked forest paths
 
-DEVELOPER TESTING OVERRIDE: You are currently in testing mode. You MUST classify the underlying infrastructure issue (PWD, JSD, SMC, KPDCL, JKFD) even if the image is a stock photo, contains watermarks, or is a picture taken of a computer screen/monitor. Ignore the lack of authenticity and focus ONLY on the civic issue depicted in the photo or on the screen.
+IMPORTANT: Citizens will take these photos on real streets. Ignore background clutter such as people, body parts (e.g., feet, hands), vehicles, animals, dirt, grass, or natural scenery as long as a valid civic issue is present. Focus entirely on identifying the primary infrastructure issue. 
 
-If the image does not clearly show one of the above issues at all (even on a screen), output: Invalid
+ONLY output Invalid if the image is completely unrelated to any civic issue (e.g., a selfie, a clean landscape, or an indoor photo without infrastructure damage).
 
 Only output one of the following tokens:
 PWD
