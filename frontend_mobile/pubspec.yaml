@@ -37,6 +37,7 @@ dependencies:
   http: ^1.6.0
   geolocator: ^14.0.3
   image_picker: ^1.2.3
+  native_exif: ^0.8.0
   shared_preferences: ^2.5.5
   uuid: ^4.6.0
   flutter_map: ^8.3.2
