@@ -27,4 +27,4 @@ This platform is built using a modern, decoupled microservices architecture:
 * **AI Auto-Categorization:** Uses GPT-5-mini vision capabilities to route issues to the correct department automatically.
 * **Geospatial Mapping:** Integrates OpenStreetMap/FlutterMap for precise location tracking.
 * **Secure Cloud Media:** Direct-to-cloud image streaming via Cloudinary.
-* **Production Ready:** Fully deployed across Render, Vercel, and Supabase.
+* **Production Ready:** Fully deployed across Google Cloud Run, Vercel, and Supabase.
